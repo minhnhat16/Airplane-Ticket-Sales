@@ -165,6 +165,7 @@ public class ServerHTPT extends JFrame {
         WriteServer write = new WriteServer();
         write.start();
         System.out.println("server start");
+        jTextArea_ThongBao.setText("Sever ready!");
         while (true) {
 
             // đợi một thằng kết nối tới và add vào list
@@ -286,6 +287,7 @@ class WriteServer extends Thread {
 
     @Override
     public void run() {
+        
         ObjectOutputStream objectOutput = null;
 
         while (true) {
