@@ -48,8 +48,8 @@ public class Client extends javax.swing.JFrame implements ActionListener {
     /**
      * Creates new form Client
      */
-    public Client() {
-
+    public Client(String ip) {
+        ipServer = ip;
         initComponents();
         try {
             client = new Socket(ipServer, 6543);
