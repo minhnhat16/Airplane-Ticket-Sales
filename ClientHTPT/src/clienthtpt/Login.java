@@ -106,8 +106,7 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Client a = new Client();
-        a.ipServer =  jTextField1.getText(); 
+        Client a = new Client(jTextField1.getText()); 
         a.setVisible(true);
         a.setLocationRelativeTo(null);
         // TODO add your handling code here:
