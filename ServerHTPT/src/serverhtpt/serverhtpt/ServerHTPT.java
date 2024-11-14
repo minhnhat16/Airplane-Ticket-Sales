@@ -6,7 +6,7 @@
 package serverhtpt;
 
 import com.connect.ConnectDatabaseDVX;
-import java.awt.Color;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.DataInputStream;
@@ -54,7 +54,10 @@ public class ServerHTPT extends JFrame {
 
     public ServerHTPT(int port) {
         this.port = port;
-        access = new ConnectDatabaseDVX("jdbc:sqlserver://localhost:1433;Database=VEMAYBAY;user=sa;password=1234", "com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        access = new ConnectDatabaseDVX(
+                "jdbc:sqlserver://localhost:1433;databaseName=VeMayBay;user=NewAdmin;password=1234;trustServerCertificate=true;",
+                "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+        );
         initComponents();
         loadTable();
         timerLoadTable = new Timer(500, new ActionListener() {
@@ -223,7 +226,7 @@ class ReadServer extends Thread {
     public void run() {
         DataInputStream dis = null;
 
-        access = new ConnectDatabaseDVX("jdbc:sqlserver://localhost:1433;Database=VEMAYBAY;user=sa;password=1234", "com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        access = new ConnectDatabaseDVX("jdbc:sqlserver://localhost:1433;Database=VeMayBay;user=NewAdmin;password=1234; trustServerCertificate=true", "com.microsoft.sqlserver.jdbc.SQLServerDriver");
         try {
             // khai báo dis để đọc dữ liệu trả về
             dis = new DataInputStream(socket.getInputStream());
@@ -273,14 +276,7 @@ class ReadServer extends Thread {
         }
     }
 
-//    private boolean checkExitsClient(int port){
-//        for (Integer i : listDK.keySet() ) {
-//           if(i == port){
-//               return true;
-//           }
-//        }
-//        return false;
-//    }
+
 }
 
 class WriteServer extends Thread {

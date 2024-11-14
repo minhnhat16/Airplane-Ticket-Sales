@@ -4,7 +4,6 @@
  */
 package clienthtpt;
 
-import com.connect.ConnectDatabaseDVX;
 import com.serviceExchange.ExchangeData;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -12,18 +11,10 @@ import java.awt.event.ActionListener;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.net.InetAddress;
-import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.Timer;
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
