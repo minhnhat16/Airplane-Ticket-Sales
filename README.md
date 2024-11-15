@@ -3,7 +3,8 @@ An application created to describe ticketing behavior and interaction between se
 ## Build with Java Swing
 ## How to run 
 * Run MSSQL and add database with VeMayBay.bacpac
-* Run the Server and take the IP Address
-* Run Client and input the IP above to connect
+* change username and password
+* Run the Server and take the IP Address (Server) 
+* Run Client and input the IP  (Server) above to connect
 * Enjoy!
 ---
